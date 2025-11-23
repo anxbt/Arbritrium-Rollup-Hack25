@@ -1,0 +1,18 @@
+{
+  "name": "nft-bridge-relayer",
+  "version": "1.0.0",
+  "description": "Relayer service for bridging NFTs from L3 to L2",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["ethereum", "bridge", "nft", "relayer"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "dotenv": "^16.4.5"
+  }
+}
