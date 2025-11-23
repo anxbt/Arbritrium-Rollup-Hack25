@@ -1,6 +1,45 @@
-# NFT Bridge - Arbitrum Orbit L3 ↔ L2
+# NFT Bridge — One-Tap Orbit L3 → Arbitrum L2  
+### A trustless, intent-based NFT bridge built on real Arbitrum Nitro
 
-> **Intent-based NFT bridging between Arbitrum Orbit L3 and L2 using trustless relayers**
+*Shows: Nitro node startup → Contract deployment → Mint → Bridge → Relayer processing → L2 verification*
+
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/aaBb6EQzLhA)
+
+
+
+## TL;DR (Judge Summary)
+
+This project lets you move an NFT from an Arbitrum Orbit L3 to Arbitrum L2 with one tap.
+
+No gas problems.  
+No chain switching.  
+No bridge UI.  
+No approvals.  
+The user just says "I want this NFT on L2".
+
+Our system handles:
+- burning on L3  
+- detecting the intent  
+- relaying automatically  
+- minting on L2  
+- preventing double spends  
+
+
+Runs fully on Arbitrum Nitro (real Orbit stack) + a trustless relayer.
+This project lets you move an NFT from an Arbitrum Orbit L3 to Arbitrum L2 with one tap.
+
+No gas problems.  
+No chain switching.  
+No bridge UI.  
+No approvals.  
+The user just says "I want this NFT on L2".
+
+Our system handles:
+
+
+This project lets you move an NFT from an Arbitrum Orbit L3 to Arbitrum L2 with one tap.
+
+
 
 ## Problem
 
@@ -332,11 +371,6 @@ custom error 0x7e273289: ERC721NonexistentToken(1)
 
 **Key insight:** This is trustless! The relayer can't steal your NFT - it can only mint on L2 if a valid `BridgeIntent` event exists on L3.
 
-### Complete Documentation
-
-- **[NITRO_DEMO.md](./NITRO_DEMO.md)** - Full setup with Arbitrum Nitro node
-- **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - Detailed local development guide
-- **[QUICK_SETUP.md](./QUICK_SETUP.md)** - Frontend integration guide
 
 ## Deployed Addresses
 
@@ -352,11 +386,9 @@ custom error 0x7e273289: ERC721NonexistentToken(1)
 | OrbitNFT | Arbitrum Orbit L3 | TBD | TBD |
 | L2BridgeNFT | Arbitrum Sepolia | TBD | [Arbiscan](https://sepolia.arbiscan.io) |
 
-## Video Demo
 
-🎥 **[90-Second Demo Video](VIDEO_LINK_HERE)** - Full bridge flow walkthrough
 
-*Shows: Nitro node startup → Contract deployment → Mint → Bridge → Relayer processing → L2 verification*
+
 
 ## Technical Highlights
 
@@ -408,20 +440,3 @@ forge script script/TestBridge.s.sol:TestBridge --private-key $PK
 - **For Relayers**: Permissionless participation, MEV opportunities
 - **For Orbit Chains**: Easy asset movement between L2↔L3 ecosystems
 
-## Submission Checklist
-
-- [x] **README** with: problem → solution → demo steps
-- [x] Deployed addresses + explorers (L2 and/or L3)
-- [ ] **Video (≤90s)** link (screen capture OK)
-
-## Built With
-
-- [Arbitrum Nitro](https://github.com/OffchainLabs/nitro) - L3 Orbit chain runtime
-- [Foundry](https://book.getfoundry.sh/) - Smart contract development
-- [OpenZeppelin](https://www.openzeppelin.com/) - ERC721 implementation
-- [ethers.js](https://docs.ethers.org/) - Relayer service
-- [Next.js](https://nextjs.org/) - Frontend interface
-
-## License
-
-MIT
